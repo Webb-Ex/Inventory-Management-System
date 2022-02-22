@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D19C268C-C237-4C02-99B9-7EBA64D71846}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventory_Managment_System_in_csharp</RootNamespace>
+    <AssemblyName>Inventory Managment System in csharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db_categories.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_categories.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_customers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_customers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_orders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_orders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_print.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_print.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_procard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_procard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_product.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_product.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_user.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_user.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_admin_login.Designer.cs">
+      <DependentUpon>frm_admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Home.Designer.cs">
+      <DependentUpon>frm_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_invoice.Designer.cs">
+      <DependentUpon>frm_invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uc_categories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_categories.Designer.cs">
+      <DependentUpon>uc_categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_customers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_customers.Designer.cs">
+      <DependentUpon>uc_customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_home.Designer.cs">
+      <DependentUpon>uc_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_orders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_orders.Designer.cs">
+      <DependentUpon>uc_orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Product.Designer.cs">
+      <DependentUpon>uc_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_sales_invoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_sales_invoice.Designer.cs">
+      <DependentUpon>uc_sales_invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_User.Designer.cs">
+      <DependentUpon>uc_User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_admin_login.resx">
+      <DependentUpon>frm_admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Home.resx">
+      <DependentUpon>frm_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_invoice.resx">
+      <DependentUpon>frm_invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rdl_invoice.rdlc" />
+    <EmbeddedResource Include="uc_categories.resx">
+      <DependentUpon>uc_categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_customers.resx">
+      <DependentUpon>uc_customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_home.resx">
+      <DependentUpon>uc_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_orders.resx">
+      <DependentUpon>uc_orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Product.resx">
+      <DependentUpon>uc_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_sales_invoice.resx">
+      <DependentUpon>uc_sales_invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_User.resx">
+      <DependentUpon>uc_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="db_categories.xsc">
+      <DependentUpon>db_categories.xsd</DependentUpon>
+    </None>
+    <None Include="db_categories.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_categories.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="db_categories.xss">
+      <DependentUpon>db_categories.xsd</DependentUpon>
+    </None>
+    <None Include="ds_customers.xsc">
+      <DependentUpon>ds_customers.xsd</DependentUpon>
+    </None>
+    <None Include="ds_customers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_customers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_customers.xss">
+      <DependentUpon>ds_customers.xsd</DependentUpon>
+    </None>
+    <None Include="ds_orders.xsc">
+      <DependentUpon>ds_orders.xsd</DependentUpon>
+    </None>
+    <None Include="ds_orders.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_orders.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_orders.xss">
+      <DependentUpon>ds_orders.xsd</DependentUpon>
+    </None>
+    <None Include="ds_print.xsc">
+      <DependentUpon>ds_print.xsd</DependentUpon>
+    </None>
+    <None Include="ds_print.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_print.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_print.xss">
+      <DependentUpon>ds_print.xsd</DependentUpon>
+    </None>
+    <None Include="ds_procard.xsc">
+      <DependentUpon>ds_procard.xsd</DependentUpon>
+    </None>
+    <None Include="ds_procard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_procard.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_procard.xss">
+      <DependentUpon>ds_procard.xsd</DependentUpon>
+    </None>
+    <None Include="ds_product.xsc">
+      <DependentUpon>ds_product.xsd</DependentUpon>
+    </None>
+    <None Include="ds_product.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_product.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_product.xss">
+      <DependentUpon>ds_product.xsd</DependentUpon>
+    </None>
+    <None Include="ds_user.xsc">
+      <DependentUpon>ds_user.xsd</DependentUpon>
+    </None>
+    <None Include="ds_user.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_user.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_user.xss">
+      <DependentUpon>ds_user.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_mgmr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_instagram_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_twitter_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>IMS.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\icons8_Facebook_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CrystalReportsCommonObjectModelLib">
+      <Guid>{FDB9B69E-BA79-4B13-9E96-8373AF162AEA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
